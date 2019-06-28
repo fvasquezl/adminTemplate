@@ -36,23 +36,24 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <router-link :to="`users`" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Users</p>
-                </a>
+                </router-link>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <router-link :to="`/`" class="nav-link">
               <i class="fas fa-gift"></i>
               <p>
                 Product Catalog
               </p>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link">
+            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
               <i class="fas fa-power-off"></i>
               <p>Logout</p>
             </a>
